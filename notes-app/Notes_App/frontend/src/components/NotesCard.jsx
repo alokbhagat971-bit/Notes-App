@@ -12,7 +12,7 @@ function NotesCard() {
   const [loadingNotes, setLoadingNotes] = useState(false);
 
   const navigate = useNavigate();
-  const BASE_URL = import.meta.env.VITE_API_URL;
+  const BASE_URL = "http://localhost:4000";
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -53,39 +53,42 @@ function NotesCard() {
   };
 
   const addNote = async () => {
-    if (!title.trim() && !content.trim()) return;
+  if (!title.trim() && !content.trim()) return;
 
-    const token = localStorage.getItem("token");
-    if (!token) {
-      navigate("/login");
-      return;
+  const token = localStorage.getItem("token");
+  if (!token) {
+    navigate("/login");
+    return;
+  }
+
+  try {
+    const res = await fetch(`${BASE_URL}/api/notes`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify({
+        title: title.trim(),
+        content: content.trim(),
+      }),
+    });
+
+    if (!res.ok) {
+      throw new Error(`HTTP error! Status: ${res.status}`);
     }
 
-    try {
-      const res = await fetch(`${BASE_URL}/api/notes`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${token}`,
-        },
-        body: JSON.stringify({
-          title: title.trim(),
-          content: content.trim(),
-        }),
-      });
+    const data = await res.json();
 
-      const data = await res.json();
-
-      if (data && data._id) {
-        setSaved((prev) => [data, ...prev]);
-      }
-
+    if (data && data._id) {
+      setSaved((prev) => [data, ...prev]);
       setTitle("");
       setContent("");
-    } catch (err) {
-      console.error("Failed to add note:", err);
     }
-  };
+  } catch (err) {
+    console.error("Failed to add note:", err);
+  }
+};
 
   const deleteNote = async (id) => {
     const token = localStorage.getItem("token");
