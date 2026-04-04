@@ -41,7 +41,7 @@ The main workspace where users can:
 
 #### 🧾 Notes Overview
 
-<img src="notes-app/Notes_App/images/Notes1.png.png" width="800"/>
+<img src="notes-app/Notes_App/images/Home.png.png" width="800"/>
 
 <img src="notes-app/Notes_App/images/Notes2.png.png" width="800"/>
 
