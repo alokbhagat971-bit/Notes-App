@@ -19,7 +19,7 @@
 
 A clean and minimal login interface for secure access.
 
-<img src="notes-app/Notes_App/images/login.png.png" width="800"/>
+<img src="notes-app/Notes_App/images/login.png.png" width="400"/>
 
 
 ---
@@ -27,7 +27,7 @@ A clean and minimal login interface for secure access.
 ### 🆕 Signup Page
 
 Simple user registration with consistent UI design.
-<img src="notes-app/Notes_App/images/signup.png.png" width="800"/>
+<img src="notes-app/Notes_App/images/signup.png.png" width="400"/>
 
 ---
 
