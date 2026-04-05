@@ -19,7 +19,7 @@
 
 A clean and minimal login interface for secure access.
 
-<img src="notes-app/Notes_App/images/login.png.png" width="400"/>
+<img src="notes-app/Notes_App/images/login.png" width="400"/>
 
 
 ---
@@ -27,7 +27,7 @@ A clean and minimal login interface for secure access.
 ### 🆕 Signup Page
 
 Simple user registration with consistent UI design.
-<img src="notes-app/Notes_App/images/signup.png.png" width="400"/>
+<img src="notes-app/Notes_App/images/signup.png" width="400"/>
 
 ---
 
@@ -41,9 +41,9 @@ The main workspace where users can:
 
 #### 🧾 Notes Overview
 
-<img src="notes-app/Notes_App/images/Home.png.png" width="800"/>
+<img src="notes-app/Notes_App/images/Home.png" width="800"/>
 
-<img src="notes-app/Notes_App/images/Notes2.png.png" width="800"/>
+<img src="notes-app/Notes_App/images/Notes2.png" width="800"/>
 
 ---
 
